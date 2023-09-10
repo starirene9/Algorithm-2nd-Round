@@ -7,7 +7,9 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) { // apple
-   return str.split('').reduce((rev, char)=> char + rev, '')
+    return str.split('').reduce((reversed,char)=>{
+        return char + reversed;
+    },'')
 }
 
 reverse('bitna');
@@ -33,5 +35,4 @@ module.exports = reverse;
 // function reverse(str) {
 //     return str.split('').reduce((rev, char) => char + rev,'');
 // }
-
-// debugger, cont, exit cntrl c
+// reduce 함수는 누적된 결과를 생성, 초기 누적값은 ''
